@@ -1,6 +1,6 @@
 # Gaomon M6 滚动环和顶部软键
 
-适用于 OpenTabletDriver 0.6.8.1。顺逆时针会出现在 OpenTabletDriver 的原生绑定界面。顶部 16 个软键通过笔尖坐标识别，在 OpenTabletDriver 中对应辅助键 14–29。
+适用于原版 OpenTabletDriver 0.6.8.1。安装插件和随附的 `M6.json` 后，即可在原版界面配置滚动环和顶部 16 个软键。
 
 ## Linux 安装
 
@@ -18,7 +18,7 @@ systemctl --user restart opentabletdriver
 
 ## 顶部软键
 
-在 **Auxiliary Settings** 里设置 **Auxiliary Binding 14–29**。从左到右，软键 1 对应 14，软键 16 对应 29。新槽位初始为空。用笔尖点按顶部印有编号的区域，抬笔后释放绑定。
+打开原版界面的 **Auxiliary Settings**。**Auxiliary Binding 1–13** 对应原有按键，**Auxiliary Binding 14–29** 对应顶部软键。顶部软键从左到右编号 1–16，例如最左边对应 **Auxiliary Binding 14**，最右边对应 **Auxiliary Binding 29**。软键初始无绑定，用笔尖点按触发，抬笔释放。
 
 感应带取原始坐标顶部 5 mm，横向均分 16 格。只有从该区域落笔才会触发软键，从绘图区开始的笔划会继续按普通笔划处理。软键坐标来自 USB 型号 `256c:0064`、设备字符串 `GM001_T223_240315` 的实机录制。
 
