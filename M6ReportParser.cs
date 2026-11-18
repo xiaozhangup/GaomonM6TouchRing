@@ -10,7 +10,7 @@ public sealed class M6ReportParser : IReportParser<IDeviceReport>
     private const int HardwareButtonCount = 13;
     private const int SoftKeyCount = 16;
     private const int TabletWidth = 50800;
-    private const int SoftKeyStripHeight = 1000; // 5 mm at 5080 LPI
+    private const int SoftKeyBottom = 1400; // 7 mm at 5080 LPI
 
     private readonly UCLogicV2ReportParser _baseParser = new();
     private bool[] _hardwareButtons = new bool[HardwareButtonCount];
@@ -51,9 +51,9 @@ public sealed class M6ReportParser : IReportParser<IDeviceReport>
             return GetAuxReport(data);
         }
 
-        // Decide on touchdown so a stroke that started below the strip remains a stroke.
+        // Decide on touchdown so a stroke that started outside the strip remains a stroke.
         if (tipDown && !_tipDown && report is ITabletReport pen
-            && pen.Position.Y < SoftKeyStripHeight && pen.Position.X <= TabletWidth)
+            && pen.Position.X <= TabletWidth && pen.Position.Y <= SoftKeyBottom)
         {
             _activeSoftKey = Math.Min((int)pen.Position.X * SoftKeyCount / TabletWidth, SoftKeyCount - 1);
             _tipDown = true;
