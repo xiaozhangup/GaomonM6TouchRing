@@ -1,7 +1,5 @@
 # Gaomon M6 滚动环和顶部软键
 
-插件作者 **xiaozhangup**。
-
 适用于 OpenTabletDriver 0.6.8.1。顺逆时针会出现在 OpenTabletDriver 的原生绑定界面。顶部 16 个软键通过笔尖坐标识别，在 OpenTabletDriver 中对应辅助键 14–29。
 
 ## Linux 安装
