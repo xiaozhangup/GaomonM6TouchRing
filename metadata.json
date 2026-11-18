@@ -1,0 +1,9 @@
+{
+  "Name": "Gaomon M6 Touch Ring",
+  "Owner": "xiaozhangup",
+  "Description": "Adds native wheel bindings and 16 pen-activated soft keys for the Gaomon M6.",
+  "PluginVersion": "1.0.0",
+  "SupportedDriverVersion": "0.6.8.1",
+  "RepositoryUrl": "https://github.com/xiaozhangup/GaomonM6TouchRing",
+  "LicenseIdentifier": "LGPL-3.0-or-later"
+}
